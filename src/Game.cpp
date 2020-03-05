@@ -4,8 +4,3 @@ Game::Game()
 {
     //ctor
 }
-
-Game::~Game()
-{
-    //dtor
-}

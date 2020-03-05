@@ -4,11 +4,14 @@
 
 class Board
 {
+    protected:
+
+        int width;
+        int height();
+        int cof();
+
     public:
         Board();
-        virtual ~Board();
-
-    protected:
 
     private:
 };

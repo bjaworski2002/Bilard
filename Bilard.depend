@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1514140574 source:f:\pulpit\programowanie\c++\bilard\bilard\main.cpp
+	<iostream>
+
+1583449031 source:f:\pulpit\programowanie\c++\bilard\bilard\src\ball.cpp
+	"Ball.h"
+
+1583449068 f:\pulpit\programowanie\c++\bilard\bilard\include\ball.h
+
+1583449072 source:f:\pulpit\programowanie\c++\bilard\bilard\src\board.cpp
+	"Board.h"
+
+1583449440 f:\pulpit\programowanie\c++\bilard\bilard\include\board.h
+
+1583449173 source:f:\pulpit\programowanie\c++\bilard\bilard\src\game.cpp
+	"Game.h"
+
+1583449440 f:\pulpit\programowanie\c++\bilard\bilard\include\game.h
+	"Board.h"
+	"Player.h"
+
+1583449195 source:f:\pulpit\programowanie\c++\bilard\bilard\src\player.cpp
+	"Player.h"
+
+1583449545 f:\pulpit\programowanie\c++\bilard\bilard\include\player.h
+	<vector>
+	"Ball.h"
+
