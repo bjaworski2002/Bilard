@@ -5,7 +5,7 @@ enum Color{WHITE, YELLOW, BLUE, GREEN, ORANGE, RED, PURPLE, BLACK};
 enum Type{STRIPED, SOLID};
 class Ball
 {
-    protected:
+    private:
         int r;
         int x;
         int y;

@@ -26,3 +26,36 @@
 	<vector>
 	"Ball.h"
 
+1583503427 source:c:\users\arkadiusz\documents\projects codeblocks\bilard\main.cpp
+	<iostream>
+	"game.h"
+
+1583497852 source:c:\users\arkadiusz\documents\projects codeblocks\bilard\src\ball.cpp
+	"Ball.h"
+
+1583498089 c:\users\arkadiusz\documents\projects codeblocks\bilard\include\ball.h
+
+1583497852 source:c:\users\arkadiusz\documents\projects codeblocks\bilard\src\board.cpp
+	"Board.h"
+
+1583498082 c:\users\arkadiusz\documents\projects codeblocks\bilard\include\board.h
+
+1583503436 source:c:\users\arkadiusz\documents\projects codeblocks\bilard\src\game.cpp
+	"Game.h"
+	<fstream>
+	<iostream>
+	<cstdlib>
+
+1583502892 c:\users\arkadiusz\documents\projects codeblocks\bilard\include\game.h
+	"Board.h"
+	"Player.h"
+	<map>
+	<string>
+
+1583498098 c:\users\arkadiusz\documents\projects codeblocks\bilard\include\player.h
+	<vector>
+	"Ball.h"
+
+1583497852 source:c:\users\arkadiusz\documents\projects codeblocks\bilard\src\player.cpp
+	"Player.h"
+

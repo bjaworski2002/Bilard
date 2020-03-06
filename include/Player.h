@@ -2,13 +2,13 @@
 #define PLAYER_H
 #include <vector>
 #include "Ball.h"
+
+using namespace std;
 class Player
 {
     private:
-
-//        vector<Ball>
+        vector<Ball> balls;
         Type type;
-
     public:
         Player();
         bool hit(int angle, int speed);

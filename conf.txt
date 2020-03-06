@@ -1,0 +1,5 @@
+intervaltime 100 ms
+radius 32 mm
+board-height 1120 mm
+board-width 2240 mm
+board-cof 200 m

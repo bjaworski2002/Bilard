@@ -4,16 +4,14 @@
 
 class Board
 {
-    protected:
-
+    private:
         int width;
-        int height();
-        int cof();
+        int height;
+        float cof;
 
     public:
         Board();
 
-    private:
 };
 
 #endif // BOARD_H
