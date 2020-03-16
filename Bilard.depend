@@ -1,30 +1,37 @@
 # depslib dependency file v1.0
-1514140574 source:f:\pulpit\programowanie\c++\bilard\bilard\main.cpp
+1584319814 source:f:\pulpit\programowanie\c++\bilard\bilard\main.cpp
 	<iostream>
+	"game.h"
 
-1583449031 source:f:\pulpit\programowanie\c++\bilard\bilard\src\ball.cpp
+1584320395 source:f:\pulpit\programowanie\c++\bilard\bilard\src\ball.cpp
 	"Ball.h"
 
-1583449068 f:\pulpit\programowanie\c++\bilard\bilard\include\ball.h
+1584321337 f:\pulpit\programowanie\c++\bilard\bilard\include\ball.h
 
 1583449072 source:f:\pulpit\programowanie\c++\bilard\bilard\src\board.cpp
 	"Board.h"
 
-1583449440 f:\pulpit\programowanie\c++\bilard\bilard\include\board.h
+1584319814 f:\pulpit\programowanie\c++\bilard\bilard\include\board.h
 
-1583449173 source:f:\pulpit\programowanie\c++\bilard\bilard\src\game.cpp
+1584320855 source:f:\pulpit\programowanie\c++\bilard\bilard\src\game.cpp
 	"Game.h"
+	<fstream>
+	<iostream>
+	<cstdlib>
 
-1583449440 f:\pulpit\programowanie\c++\bilard\bilard\include\game.h
+1584319814 f:\pulpit\programowanie\c++\bilard\bilard\include\game.h
 	"Board.h"
 	"Player.h"
+	<map>
+	<string>
 
-1583449195 source:f:\pulpit\programowanie\c++\bilard\bilard\src\player.cpp
+1584320886 source:f:\pulpit\programowanie\c++\bilard\bilard\src\player.cpp
 	"Player.h"
 
-1583449545 f:\pulpit\programowanie\c++\bilard\bilard\include\player.h
+1584320881 f:\pulpit\programowanie\c++\bilard\bilard\include\player.h
 	<vector>
 	"Ball.h"
+	"Board.h"
 
 1583503427 source:c:\users\arkadiusz\documents\projects codeblocks\bilard\main.cpp
 	<iostream>

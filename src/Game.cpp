@@ -7,10 +7,10 @@ using namespace std;
 
 Game::Game()
 {
+     readConfig();
      board = new Board();
      player1 = new Player();
      player2 = new Player();
-     readConfig();
 }
 void Game::readConfig(){
     ifstream inFile;

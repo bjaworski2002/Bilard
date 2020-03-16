@@ -2,6 +2,7 @@
 #define PLAYER_H
 #include <vector>
 #include "Ball.h"
+#include "Board.h"
 
 using namespace std;
 class Player

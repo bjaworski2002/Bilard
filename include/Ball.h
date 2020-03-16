@@ -16,7 +16,7 @@ class Ball
         int angle;
         bool onBoard;
     public:
-        Ball();
+        Ball(int r, int number);
         bool isTouchingEdge();
         bool isTouchingAnotherBall(Ball b);
         void move();
@@ -29,6 +29,15 @@ class Ball
         bool isBlack();
         bool isSolid();
         bool isStriped();
+        Color getcolor();
+        Type gettype();
+//        getRadius();
+        int getX();
+        int getY();
+        int getNumber();
+        int getSpeed();
+        int getAngle();
+
 };
 
 #endif // BALL_H
