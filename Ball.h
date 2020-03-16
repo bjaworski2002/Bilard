@@ -9,9 +9,9 @@ class Ball
         int r;
         int x;
         int y;
-        Color color;
+        //Color color;
         int number;
-        Type type;
+        //Type type;
         int speed;
         int angle;
         bool onBoard;
