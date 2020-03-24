@@ -8,11 +8,12 @@ using namespace std;
 class Player
 {
     private:
-        vector<Ball> balls;
+//        vector<Ball> balls;
         Type type;
         Board board;
     public:
         Player(Board &board);
+        void print();
         bool hit(int angle, int speed);
         bool isWinner();
         bool isSolid();

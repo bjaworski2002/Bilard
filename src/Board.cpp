@@ -16,3 +16,11 @@ void Board::setWidth(int width){
 void Board::setCof(int cof){
     this->cof=cof;
 }
+//void Board::createBalls(){
+//
+//    for(int i=0; i<16; i++){
+//        ball = new Ball(,i)
+//        balls.push_back();
+//        balls.at(i)->number=i;
+//    }
+//}

@@ -16,6 +16,7 @@ class Game
         Player *player2;
         int intervalTime;
         map<string, int> configMap;
+        vector<Ball*> balls;
 
     public:
         Game();
@@ -23,6 +24,8 @@ class Game
         void readConfig();
         int printWidth();
         void setConfig();
+        void createBalls();
+        void setInitialCoordinates();
     private:
 };
 

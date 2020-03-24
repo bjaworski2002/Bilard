@@ -1,49 +1,69 @@
 #include "Ball.h"
+#include <iostream>
+
+using namespace std;
 
 Ball::Ball(int r, int number)
 {
     this->r=r;
     this->number=number;
-    onBoard=true;
+    onBoard=false;
     speed=0;
 }
-bool isOnBoard(){
-    return isOnBoard;
+void Ball::print(){
+    cout << "Kula: promien: " << r << "pozycja x: " << x << "pozycja y: " << y << "numer: " << number << "predkosc: " << speed << "onboard:  " << onBoard << endl;
 }
-bool isWhite(Color color){
-    if(color==WHITE) return true;
+bool Ball::isOnBoard(){
+    return onBoard;
+}
+bool Ball::isWhite(){
+    if(getColor()==WHITE) return true;
     else return false;
 }
-bool isBlack(Color color){
-    if(color==BLACK) return true;
+bool Ball::isBlack(){
+    if(getColor()==BLACK) return true;
     else return false;
 }
-bool isSolid(Type type){
-    if(type=SOLID) return true;
+bool Ball::isSolid(){
+    if(getType()==SOLID) return true;
     else return false;
 }
-bool isStriped(Type type){
-    if(type=STRIPED) return true;
+bool Ball::isStriped(){
+    if(getType()==STRIPED) return true;
     else return false;
 }
-Color getcolor(Color color){
-    return color;
+Color Ball::getColor(){
+    if(number>8) number=number-8;
+    return (Color)number;
 }
-Type gettype(Type type){
-    return type;
+Type Ball::getType(){
+    if(number<=8) return SOLID;
+    else return STRIPED;
 }
-int getX(int x){
+int Ball::getX(){
     return x;
 }
-int getY(int y){
+int Ball::getY(){
     return y;
 }
-int getNumber(int number){
+int Ball::getRadius(){
+    return r;
+}
+void Ball::setX(int x){
+    this->x=x;
+}
+void Ball::setY(int y){
+    this->y=y;
+}
+void Ball::setOnBoard(bool onBoard){
+    this->onBoard=onBoard;
+}
+int Ball::getNumber(){
     return number;
 }
-int getSpeed(int speed){
+int Ball::getSpeed(){
     return speed;
 }
-int getAngle(int angle){
+int Ball::getAngle(){
     return angle;
 }

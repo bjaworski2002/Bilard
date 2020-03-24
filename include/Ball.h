@@ -1,8 +1,8 @@
 #ifndef BALL_H
 #define BALL_H
 
-enum Color{WHITE, YELLOW, BLUE, GREEN, ORANGE, RED, PURPLE, BLACK};
-enum Type{STRIPED, SOLID};
+enum Color{WHITE, YELLOW, BLUE, RED, ORANGE, PURPLE, GREEN, BROWN, BLACK};
+enum Type{SOLID, STRIPED};
 class Ball
 {
     private:
@@ -19,6 +19,7 @@ class Ball
         Ball(int r, int number);
         bool isTouchingEdge();
         bool isTouchingAnotherBall(Ball b);
+        void print();
         void move();
         bool isMoving();
         void recountPosition();
@@ -29,14 +30,18 @@ class Ball
         bool isBlack();
         bool isSolid();
         bool isStriped();
-        Color getcolor();
-        Type gettype();
-//        getRadius();
+        Color getColor();
+        Type getType();
+        int getRadius();
         int getX();
         int getY();
+        void setX(int x);
+        void setY(int y);
+        void setOnBoard(bool onBoard);
         int getNumber();
         int getSpeed();
         int getAngle();
+
 
 
 };

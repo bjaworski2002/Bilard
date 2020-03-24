@@ -38,34 +38,35 @@
 	"game.h"
 	"Board.h"
 
-1584358081 source:c:\users\arkadiusz\documents\projects codeblocks\bilard\src\ball.cpp
+1585068939 source:c:\users\arkadiusz\documents\projects codeblocks\bilard\src\ball.cpp
 	"Ball.h"
+	<iostream>
 
-1584358980 c:\users\arkadiusz\documents\projects codeblocks\bilard\include\ball.h
+1585068961 c:\users\arkadiusz\documents\projects codeblocks\bilard\include\ball.h
 
-1584359041 source:c:\users\arkadiusz\documents\projects codeblocks\bilard\src\board.cpp
+1585067654 source:c:\users\arkadiusz\documents\projects codeblocks\bilard\src\board.cpp
 	"Board.h"
 
-1584360026 c:\users\arkadiusz\documents\projects codeblocks\bilard\include\board.h
+1585067664 c:\users\arkadiusz\documents\projects codeblocks\bilard\include\board.h
 
-1584360026 source:c:\users\arkadiusz\documents\projects codeblocks\bilard\src\game.cpp
+1584360734 source:c:\users\arkadiusz\documents\projects codeblocks\bilard\src\game.cpp
 	"Game.h"
 	<fstream>
 	<iostream>
 	<cstdlib>
 
-1584360658 c:\users\arkadiusz\documents\projects codeblocks\bilard\include\game.h
+1585068942 c:\users\arkadiusz\documents\projects codeblocks\bilard\include\game.h
 	"Board.h"
 	"Player.h"
 	<map>
 	<string>
 
-1584360232 c:\users\arkadiusz\documents\projects codeblocks\bilard\include\player.h
+1585067654 c:\users\arkadiusz\documents\projects codeblocks\bilard\include\player.h
 	<vector>
 	"Ball.h"
 	"Board.h"
 
-1584360172 source:c:\users\arkadiusz\documents\projects codeblocks\bilard\src\player.cpp
+1585067750 source:c:\users\arkadiusz\documents\projects codeblocks\bilard\src\player.cpp
 	"Player.h"
 	"Board.h"
 	<iostream>
