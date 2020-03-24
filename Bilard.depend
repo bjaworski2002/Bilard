@@ -1,61 +1,72 @@
 # depslib dependency file v1.0
-1514140574 source:f:\pulpit\programowanie\c++\bilard\bilard\main.cpp
+1584319814 source:f:\pulpit\programowanie\c++\bilard\bilard\main.cpp
 	<iostream>
+	"game.h"
 
-1583449031 source:f:\pulpit\programowanie\c++\bilard\bilard\src\ball.cpp
+1584320395 source:f:\pulpit\programowanie\c++\bilard\bilard\src\ball.cpp
 	"Ball.h"
 
-1583449068 f:\pulpit\programowanie\c++\bilard\bilard\include\ball.h
+1584321337 f:\pulpit\programowanie\c++\bilard\bilard\include\ball.h
 
 1583449072 source:f:\pulpit\programowanie\c++\bilard\bilard\src\board.cpp
 	"Board.h"
 
-1583449440 f:\pulpit\programowanie\c++\bilard\bilard\include\board.h
+1584319814 f:\pulpit\programowanie\c++\bilard\bilard\include\board.h
 
-1583449173 source:f:\pulpit\programowanie\c++\bilard\bilard\src\game.cpp
-	"Game.h"
-
-1583449440 f:\pulpit\programowanie\c++\bilard\bilard\include\game.h
-	"Board.h"
-	"Player.h"
-
-1583449195 source:f:\pulpit\programowanie\c++\bilard\bilard\src\player.cpp
-	"Player.h"
-
-1583449545 f:\pulpit\programowanie\c++\bilard\bilard\include\player.h
-	<vector>
-	"Ball.h"
-
-1583503427 source:c:\users\arkadiusz\documents\projects codeblocks\bilard\main.cpp
-	<iostream>
-	"game.h"
-
-1583497852 source:c:\users\arkadiusz\documents\projects codeblocks\bilard\src\ball.cpp
-	"Ball.h"
-
-1583498089 c:\users\arkadiusz\documents\projects codeblocks\bilard\include\ball.h
-
-1583497852 source:c:\users\arkadiusz\documents\projects codeblocks\bilard\src\board.cpp
-	"Board.h"
-
-1583498082 c:\users\arkadiusz\documents\projects codeblocks\bilard\include\board.h
-
-1583503436 source:c:\users\arkadiusz\documents\projects codeblocks\bilard\src\game.cpp
+1584320855 source:f:\pulpit\programowanie\c++\bilard\bilard\src\game.cpp
 	"Game.h"
 	<fstream>
 	<iostream>
 	<cstdlib>
 
-1583502892 c:\users\arkadiusz\documents\projects codeblocks\bilard\include\game.h
+1584319814 f:\pulpit\programowanie\c++\bilard\bilard\include\game.h
 	"Board.h"
 	"Player.h"
 	<map>
 	<string>
 
-1583498098 c:\users\arkadiusz\documents\projects codeblocks\bilard\include\player.h
+1584320886 source:f:\pulpit\programowanie\c++\bilard\bilard\src\player.cpp
+	"Player.h"
+
+1584320881 f:\pulpit\programowanie\c++\bilard\bilard\include\player.h
 	<vector>
 	"Ball.h"
+	"Board.h"
 
-1583497852 source:c:\users\arkadiusz\documents\projects codeblocks\bilard\src\player.cpp
+1584360321 source:c:\users\arkadiusz\documents\projects codeblocks\bilard\main.cpp
+	<iostream>
+	"game.h"
+	"Board.h"
+
+1584358081 source:c:\users\arkadiusz\documents\projects codeblocks\bilard\src\ball.cpp
+	"Ball.h"
+
+1584358980 c:\users\arkadiusz\documents\projects codeblocks\bilard\include\ball.h
+
+1584359041 source:c:\users\arkadiusz\documents\projects codeblocks\bilard\src\board.cpp
+	"Board.h"
+
+1584360026 c:\users\arkadiusz\documents\projects codeblocks\bilard\include\board.h
+
+1584360026 source:c:\users\arkadiusz\documents\projects codeblocks\bilard\src\game.cpp
+	"Game.h"
+	<fstream>
+	<iostream>
+	<cstdlib>
+
+1584360658 c:\users\arkadiusz\documents\projects codeblocks\bilard\include\game.h
+	"Board.h"
 	"Player.h"
+	<map>
+	<string>
+
+1584360232 c:\users\arkadiusz\documents\projects codeblocks\bilard\include\player.h
+	<vector>
+	"Ball.h"
+	"Board.h"
+
+1584360172 source:c:\users\arkadiusz\documents\projects codeblocks\bilard\src\player.cpp
+	"Player.h"
+	"Board.h"
+	<iostream>
 

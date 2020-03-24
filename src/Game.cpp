@@ -5,12 +5,15 @@
 
 using namespace std;
 
-Game::Game()
+Game::Game(/*Board &board*/)
 {
-     board = new Board();
-     player1 = new Player();
-     player2 = new Player();
+     //player1.setBoard(board);
+     //player2.setBoard(board);
      readConfig();
+     setConfig();
+     //board = new Board();
+     player1 = new Player(board);
+     player2 = new Player(board);
 }
 void Game::readConfig(){
     ifstream inFile;
@@ -28,6 +31,7 @@ void Game::readConfig(){
         configMap[key]=value;
         cout << configMap[key] << endl;
     }
+
 //    map<string, int>::iterator it;
 //    for( it=configMap.begin(); it!=configMap.end(); ++it )
 //    {
@@ -35,5 +39,13 @@ void Game::readConfig(){
 //    }
 }
 void Game::start(){
-
+    player1->printWidth();
+}
+int Game::printWidth(){
+    cout << board.getWidth();
+}
+void Game::setConfig(){
+    board.setHeight(configMap["board-height"]);
+    board.setWidth(configMap["board-width"]);
+    board.setCof(configMap["board-cof"]);
 }
