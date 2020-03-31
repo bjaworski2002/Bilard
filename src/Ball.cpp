@@ -1,5 +1,9 @@
 #include "Ball.h"
+#include "Board.h"
 #include <iostream>
+#include <ctime>
+#include <cmath>
+#include <random>
 
 using namespace std;
 
@@ -66,4 +70,20 @@ int Ball::getSpeed(){
 }
 int Ball::getAngle(){
     return angle;
+}
+int Ball::getGUICoordinateX(int guiWidth, Board board){
+    return x*(guiWidth / board.getWidth() );
+}
+int Ball::getGUICoordinateY(int guiHeight, Board board){
+    return y*(guiHeight / board.getHeight());
+}
+bool Ball::isTouchingEdge(Board board){
+    if(x<=r or x>=board.getWidth()-r or y<=r or y>=board.getHeight()-r) return true;
+    else return false;
+}
+bool Ball::isTouchingAnotherBall(Ball b){
+    int x1=abs(x - b.getX());
+    int y1=abs(y - b.getY());
+    if(sqrt((x1*x1)+(y1*y1) <= 2*r)){ return true; }
+    else return false;
 }

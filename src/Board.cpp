@@ -7,6 +7,9 @@ Board::Board()
 int Board::getWidth(){
     return width;
 }
+int Board::getHeight(){
+    return height;
+}
 void Board::setHeight(int height){
     this->height=height;
 }

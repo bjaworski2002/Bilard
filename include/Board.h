@@ -12,6 +12,7 @@ class Board
     public:
         Board();
         int getWidth();
+        int getHeight();
         void setHeight(int height);
         void setWidth(int width);
         void setCof(int cof);

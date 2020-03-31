@@ -1,5 +1,6 @@
 #ifndef BALL_H
 #define BALL_H
+#include "Board.h"
 
 enum Color{WHITE, YELLOW, BLUE, RED, ORANGE, PURPLE, GREEN, BROWN, BLACK};
 enum Type{SOLID, STRIPED};
@@ -17,8 +18,6 @@ class Ball
         bool onBoard;
     public:
         Ball(int r, int number);
-        bool isTouchingEdge();
-        bool isTouchingAnotherBall(Ball b);
         void print();
         void move();
         bool isMoving();
@@ -30,6 +29,8 @@ class Ball
         bool isBlack();
         bool isSolid();
         bool isStriped();
+        bool isTouchingEdge(Board board);
+        bool isTouchingAnotherBall(Ball b);
         Color getColor();
         Type getType();
         int getRadius();
@@ -41,6 +42,9 @@ class Ball
         int getNumber();
         int getSpeed();
         int getAngle();
+        int getGUICoordinateX(int guiWidth, Board board);
+        int getGUICoordinateY(int guiHeight, Board board);
+//        bool isTouchingEdge();
 
 
 
