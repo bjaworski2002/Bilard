@@ -19,7 +19,7 @@ Game::Game(/*Board &board*/)
 }
 void Game::readConfig(){
     ifstream inFile;
-    inFile.open("conf.txt");
+    inFile.open("C:\\Users\\Bartosz\\Documents\\projekt3\\conf.txt");
     if (!inFile)
     {
         cerr << "Unable to open file conf.txt";
@@ -28,7 +28,7 @@ void Game::readConfig(){
     string key;
     int value;
     string devnull;
-    while(inFile){
+    while(!inFile.eof()){
         inFile >> key >> value >> devnull;
         configMap[key]=value;
         cout << configMap[key] << endl;
@@ -41,7 +41,7 @@ void Game::readConfig(){
 //    }
 }
 void Game::start(){
-    player1->printWidth();
+//    player1->printWidth();
 }
 int Game::printWidth(){
     cout << board.getWidth();
@@ -59,27 +59,17 @@ void Game::createBalls(){
     }
 }
 void Game::setInitialCoordinates(){
-    /* wspolrzedne dla i=0; j=0; */
-    int rackX = ((board.getWidth() * 3 )/ 4 );
-    int rackY = board.getHeight() / 2;
-    /* ustawianie pozycji bia³ej i czarnej kuli*/
-    balls.at(0)->setOnBoard(true);
-    balls.at(0)->setX(board.getWidth()-rackX);
-    balls.at(0)->setY(rackY);
-
-
     for(int j=0; j<5; j++){
         for(int i=0; i<5-j; i++){
             int poz;
             int r = configMap["radius"];
             do{
-                if (i==2 and j==1) poz = 8;
-                else poz = rand() % 16;
+                poz = rand() % 16;
             }
             while(balls.at(poz)->isOnBoard());
             balls.at(poz)->setOnBoard(true);
-            balls.at(poz)->setX(rackX + (i*r*sqrt(3)));
-            balls.at(poz)->setY(rackY + ((i*r)-(2*j*r)));
+            balls.at(poz)->setX(i*r*sqrt(3));
+            balls.at(poz)->setY((i*r)-(2*j*r));
         }
 
     }
