@@ -22,6 +22,7 @@ class Game
     public:
         Game(GUI* gui);
         void start();
+        void hit(int v);
         void readConfig();
         void printWidth();
         void setConfig();
@@ -29,6 +30,7 @@ class Game
         void setInitialCoordinates();
         void setGUI(GUI* gui);
         Board* getBoard();
+        vector<Ball*>* getBalls();
     private:
 };
 

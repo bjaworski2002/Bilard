@@ -10,15 +10,18 @@ class Ball
         int r;
         int x;
         int y;
+        int dx;
+        int dy;
         //Color color;
         int number;
         //Type type;
         int speed;
         int angle;
         bool onBoard;
+        bool changed;
     public:
         Ball(int r, int number);
-        bool isTouchingEdge();
+        bool isTouchingEdge(Board &board);
         bool isTouchingAnotherBall(Ball b);
         void print();
         void move();
@@ -36,15 +39,18 @@ class Ball
         int getRadius();
         int getX();
         int getY();
+        int getDX();
+        int getDY();
         void setX(int x);
         void setY(int y);
         void setOnBoard(bool onBoard);
+        void setChanged(bool changed);
         int getNumber();
         int getSpeed();
         int getAngle();
         int getGUICoordinateX(int guiWidth, Board board);
         int getGUICoordinateY(int guiHeight, Board board);
-
+        bool hasChanged();
 
 
 };

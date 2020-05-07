@@ -1,1 +1,7 @@
-﻿  bilard_test.vcxproj -> F:\Pulpit\programowanie\C++\bilard_test\bilard_test\x64\Debug\bilard_test.exe
+﻿  Ball.cpp
+  Game.cpp
+  Player.cpp
+  gui.cpp
+  main.cpp
+F:\Pulpit\programowanie\C++\bilard\bilard\bilard_test\Game.cpp(4,10): warning C4067: nieoczekiwane tokeny występujące po dyrektywie preprocesora - oczekiwano nowego wiersza
+  bilard_test.vcxproj -> F:\Pulpit\programowanie\C++\bilard\bilard\bilard_test\x64\Debug\bilard_test.exe

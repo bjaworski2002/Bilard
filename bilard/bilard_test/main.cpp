@@ -7,7 +7,8 @@
 #include <QGraphicsView>
 #include <QGraphicsRectItem>
 #include <QGraphicsEllipseItem>
-//using namespace std;
+#include <Windows.h>
+using namespace std;
 
 /* int main(int argc, char* argv[])
 {
@@ -37,15 +38,24 @@
 int main(int argc, char* argv[])
 {
     QApplication a(argc, argv);
+    srand(time(0));
 
     GUI gui;
     Game game(&gui);
     gui.setBoard(game.getBoard());
-    //game.setGUI(&gui);
+    gui.setBalls(game.getBalls());
     gui.init();
     gui.show();
     game.start();
     gui.print(gui.getBoard()->getHeight());
     gui.print(gui.getBoard()->getWidth());
+ //   gui.refresh();
+    gui.delay(2000);
+ //   gui.show2();
+ /*   for (int i = 0; i < 1000; i=i+10) {
+        game.hit(i);
+        gui.delay(500);
+    } */
+    // game.hit(1000);
     return a.exec(); 
 }

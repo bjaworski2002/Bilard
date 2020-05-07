@@ -8,7 +8,7 @@ using namespace std;
 class Player
 {
     private:
-//        vector<Ball> balls;
+        std::vector<Ball> balls;
         Type type;
         Board board;
     public:

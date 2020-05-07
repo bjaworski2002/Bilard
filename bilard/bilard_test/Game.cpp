@@ -18,6 +18,7 @@ Game::Game(GUI* gui)
      player1 = new Player(board);
      player2 = new Player(board);
      createBalls();
+     setInitialCoordinates();
 }
 void Game::readConfig(){
     ifstream inFile;
@@ -44,6 +45,17 @@ void Game::readConfig(){
 }
 void Game::start(){
 //    player1->printWidth();
+}
+void Game::hit(int v)
+{   
+    // for (int i = v; i > 0; i--) {
+        int x = balls.at(0)->getX();
+        balls.at(0)->setX(x+v);
+        balls.at(0)->setChanged(true);
+
+        gui->refresh();
+     //   gui->delay(2000);
+    // }
 }
 void Game::printWidth(){
     cout << board.getWidth();
@@ -97,4 +109,8 @@ void Game::setGUI(GUI* gui)
 Board* Game::getBoard()
 {
     return &board;
+}
+vector<Ball*>* Game::getBalls()
+{
+    return &balls;
 }

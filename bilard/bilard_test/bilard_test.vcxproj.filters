@@ -61,11 +61,6 @@
     </QtUic>
   </ItemGroup>
   <ItemGroup>
-    <QtRcc Include="bilard_test.qrc">
-      <Filter>Resource Files</Filter>
-    </QtRcc>
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="Ball.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -89,5 +84,10 @@
     <Text Include="conf.txt">
       <Filter>Source Files</Filter>
     </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="bilard_test.qrc">
+      <Filter>Source Files</Filter>
+    </QtRcc>
   </ItemGroup>
 </Project>
