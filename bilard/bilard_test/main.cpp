@@ -52,10 +52,10 @@ int main(int argc, char* argv[])
  //   gui.refresh();
     gui.delay(2000);
  //   gui.show2();
- /*   for (int i = 0; i < 1000; i=i+10) {
+   /*for (int i = 0; i < 1000; i=i+10) {
         game.hit(i);
         gui.delay(500);
-    } */
-    // game.hit(1000);
+    }*/
+    game.hit(50);
     return a.exec(); 
 }

@@ -84,6 +84,7 @@
     <ClCompile Include="Board.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="gui.cpp" />
+    <ClCompile Include="GuiBall.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Type.cpp" />
@@ -103,6 +104,7 @@
     <ClInclude Include="Board.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="gui.h" />
+    <ClInclude Include="GuiBall.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Type.h" />
   </ItemGroup>

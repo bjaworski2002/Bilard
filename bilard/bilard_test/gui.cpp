@@ -1,4 +1,5 @@
 #include "gui.h"
+#include "GuiBall.h"
 #include "Board.h"
 #include "Ball.h"
 #include <QApplication>
@@ -34,7 +35,11 @@ void GUI::init(){
            int y = getGUIY(balls->at(i)->getY());
            int r = d/2;
            
-           QGraphicsEllipseItem* ellipse = new QGraphicsEllipseItem();
+           GuiBall* guiBall = new GuiBall(x, y, r, i);
+           guiBall->setColor(getQTColor(balls->at(i)->getColor()));
+           guiBall->addItems(this);
+           guiBalls.push_back(guiBall);
+           /* QGraphicsEllipseItem* ellipse = new QGraphicsEllipseItem();
            ellipse->setRect(x, y, d, d);
            ellipse->setBrush(getQTColor(balls->at(i)->getColor()));
            scene->addItem(ellipse);
@@ -47,7 +52,7 @@ void GUI::init(){
                strippedRect->setBrush(getQTColor(balls->at(i)->getColor()));
                scene->addItem(strippedRect);
            }
-           printBall(i, x + r, y + r);
+           addNumber(i, x + r, y + r); */
        }
 
 }
@@ -55,13 +60,14 @@ void GUI::refresh(){
     int d = 2 * getGUIR(balls->at(0)->getRadius());
     for (int i = 0; i < 16; i++) {
         Ball* b = balls->at(i);
-        if (b->hasChanged()) {
+        /*if (b->hasChanged()) {
             QGraphicsEllipseItem* ellipse = guiBalls.at(i);
             int dx = balls->at(i)->getDX();
             int dy = balls->at(i)->getDY();
+            print(dy);
             ellipse->setX(dx);
             ellipse->setY(dy);
-        }
+        } */
     }
 }
 void GUI::delay(int ms)
@@ -108,24 +114,33 @@ void GUI::print(int a)
     scene->addItem(text);
     printHeight = printHeight + 20;
 }
-void GUI::printBall(int i, int x, int y)
+void GUI::addItem(QGraphicsItem* item)
+{
+    scene->addItem(item);
+}
+/* void GUI::addNumber(int i, int x, int y)
 {
     int r = getGUIR(balls->at(i)->getRadius());
     std::string s = std::to_string(i);
     QString qs = QString::fromStdString(s);
-    QGraphicsSimpleTextItem* text = new QGraphicsSimpleTextItem();
-    text->setText(qs);
-    text->setPos(x-(r/2), y-(r/2));
+    QGraphicsSimpleTextItem* ballNumber = new QGraphicsSimpleTextItem();
+    ballNumber->setText(qs);
+    if (i < 10) {
+        ballNumber->setPos(x - (r / 5), y - (r*3 / 5));
+    }
+    else {
+        ballNumber->setPos(x - (r*4 / 5), y - (r*3/5));
+    }
 
     QFont font;
     font.setPixelSize(r);
     font.setBold(1);
-    text->setFont(font);
+    ballNumber->setFont(font);
     QPen pen;
     if (i == 8) pen.setBrush(Qt::white);
-    text->setPen(pen);
-    scene->addItem(text);
-}
+    ballNumber->setPen(pen);
+    scene->addItem(ballNumber);
+} */
 void GUI::setScreenHeight(int screenHeight)
 {
     this->screenHeight = screenHeight;

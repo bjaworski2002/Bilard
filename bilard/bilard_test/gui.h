@@ -10,6 +10,7 @@
 #include <vector>
 #include "Board.h"
 #include "Ball.h"
+#include "GuiBall.h"
 class GUI
 {
 private:
@@ -17,7 +18,7 @@ private:
     QGraphicsView* view;
     Board* board;
     std::vector<Ball*>* balls;
-    std::vector<QGraphicsEllipseItem*> guiBalls;
+    std::vector<GuiBall*> guiBalls;
     int printHeight;
     int screenHeight;
     int screenWidth;
@@ -33,7 +34,8 @@ public:
     Board* getBoard();
     void print(std::string s);
     void print(int a);
-    void printBall(int i, int x, int y);
+    void addItem(QGraphicsItem* item);
+    void addNumber(int i, int x, int y);
     void setScreenHeight(int screenHeight);
     void setScreenWidth(int screenWidth);
     int getGUIX(int x);

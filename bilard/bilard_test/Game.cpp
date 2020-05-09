@@ -50,11 +50,12 @@ void Game::hit(int v)
 {   
     // for (int i = v; i > 0; i--) {
         int x = balls.at(0)->getX();
+        int y = balls.at(0)->getY();
         balls.at(0)->setX(x+v);
         balls.at(0)->setChanged(true);
-
+        balls.at(0)->setY(y);
         gui->refresh();
-     //   gui->delay(2000);
+        gui->delay(2000);
     // }
 }
 void Game::printWidth(){
