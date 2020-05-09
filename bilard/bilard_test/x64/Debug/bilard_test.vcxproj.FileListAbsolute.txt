@@ -1,2 +1,4 @@
 F:\Pulpit\programowanie\C++\bilard\bilard\bilard_test\x64\Debug\bilard_test.exe
 F:\Pulpit\programowanie\C++\bilard\bilard\bilard_test\x64\Debug\bilard_test.pdb
+F:\Pulpit\programowanie\C++\bilard-9v\bilard\bilard_test\x64\Debug\bilard_test.exe
+F:\Pulpit\programowanie\C++\bilard-9v\bilard\bilard_test\x64\Debug\bilard_test.pdb
