@@ -89,7 +89,7 @@ void Game::setInitialCoordinates() {
         for (int i = 0; i < j+1; i++) {
             int poz;
             do {
-                if (i == 2 && j == 1) poz = 8;
+                if (j==2 && i==1) poz = 8;
                 else poz = rand() % 16;
             } while (balls.at(poz)->isOnBoard());
             balls.at(poz)->setOnBoard(true);

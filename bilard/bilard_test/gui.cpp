@@ -40,10 +40,12 @@ void GUI::init(){
            scene->addItem(ellipse);
            guiBalls.push_back(ellipse);
            if (i > 8) {
-               /* QGraphicsRectItem* strippedRect = new QGraphicsRectItem();
-               strippedRect->setRect(x+(r-r*sqrt(3))/2, y-r/4, r*sqrt(3), r/2);
-               strippedRect->setBrush(Qt::white);
-               scene->addItem(strippedRect); */
+               QGraphicsRectItem* strippedRect = new QGraphicsRectItem();
+               ellipse->setBrush(Qt::white);
+               scene->addItem(ellipse);
+               strippedRect->setRect(x+((2*r-(r*sqrt(3)))/2), y+(r/2), r*sqrt(3), r);
+               strippedRect->setBrush(getQTColor(balls->at(i)->getColor()));
+               scene->addItem(strippedRect);
            }
            printBall(i, x + r, y + r);
        }
