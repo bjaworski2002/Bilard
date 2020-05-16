@@ -54,8 +54,7 @@ int main(int argc, char* argv[])
  //   gui.show2();
    /*for (int i = 0; i < 1000; i=i+10) {
         game.hit(i);
-        gui.delay(500);
     }*/
-    game.hit(50);
+    //game.hit(500);
     return a.exec(); 
 }

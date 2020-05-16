@@ -22,7 +22,7 @@ Game::Game(GUI* gui)
 }
 void Game::readConfig(){
     ifstream inFile;
-    inFile.open("F:\\Pulpit\\programowanie\\C++\\bilard_test\\bilard_test\\bilard_test\\conf.txt");
+    inFile.open("F:\\Pulpit\\programowanie\\C++\\bilard-9v\\bilard\\bilard_test\\conf.txt");
     if (!inFile)
     {
         cerr << "Unable to open file conf.txt";
@@ -51,11 +51,13 @@ void Game::hit(int v)
     // for (int i = v; i > 0; i--) {
         int x = balls.at(0)->getX();
         int y = balls.at(0)->getY();
-        balls.at(0)->setX(x+v);
+        gui->print(x);
+        gui->print(y);
+        balls.at(0)->setX(0);
         balls.at(0)->setChanged(true);
-        balls.at(0)->setY(y);
+        balls.at(0)->setY(0);
         gui->refresh();
-        gui->delay(2000);
+        gui->delay(500);
     // }
 }
 void Game::printWidth(){

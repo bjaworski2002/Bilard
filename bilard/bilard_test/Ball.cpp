@@ -12,6 +12,8 @@ Ball::Ball(int r, int number)
 {
     dx = 0;
     dy = 0;
+    x = 0;
+    y = 0;
     this->r=r;
     this->number=number;
     onBoard=false;
@@ -103,4 +105,12 @@ bool Ball::isTouchingAnotherBall(Ball b) {
 
 bool Ball::hasChanged(){
     return changed;
+}
+
+int Ball::getVX(int t)
+{   
+    double a = board->getCof * g;
+    double a0 = a * cos(angle);
+    double v0x = v0 * cos(angle);
+    return v0x + (ax*t);
 }

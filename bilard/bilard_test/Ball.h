@@ -12,6 +12,8 @@ class Ball
         int y;
         int dx;
         int dy;
+        int v0;
+        int g; /* temp */
         //Color color;
         int number;
         //Type type;
@@ -19,6 +21,7 @@ class Ball
         int angle;
         bool onBoard;
         bool changed;
+        Board* board;
     public:
         Ball(int r, int number);
         bool isTouchingEdge(Board &board);
@@ -51,6 +54,8 @@ class Ball
         int getGUICoordinateX(int guiWidth, Board board);
         int getGUICoordinateY(int guiHeight, Board board);
         bool hasChanged();
+        int getVX(int t);
+        int getVY(int t);
 
 
 };

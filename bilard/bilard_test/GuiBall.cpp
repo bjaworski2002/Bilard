@@ -15,7 +15,9 @@
 #include <QPen>
 #include <QPointF>
 
-GuiBall::GuiBall(int x, int y, int r, int number) {
+GuiBall::GuiBall(int x, int y, int r, int number, Ball* ball) {
+    
+    this->ball = ball;
     int d = 2 * r;
     ellipse = new QGraphicsEllipseItem();
     ellipse->setRect(x, y, d, d);
@@ -64,4 +66,30 @@ void GuiBall::addItems(GUI* gui)
         gui->addItem(strippedRect);
     }
     gui->addItem(ballNumber);
+}
+
+void GuiBall::refresh()
+{
+    ellipse->setX(ball->getDX());
+    ellipse->setY(ball->getDY());
+
+    ballNumber->setX(ball->getDX());
+    ballNumber->setY(ball->getDY());
+}
+
+void GuiBall::setX(int x)
+{
+    ball->setX(x);
+}
+void GuiBall::setY(int y)
+{
+    ball->setY(y);
+}
+int GuiBall::getX()
+{
+    return ball->getX();
+}
+int GuiBall::getY()
+{
+    return ball->getY();
 }

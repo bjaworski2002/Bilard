@@ -5,3 +5,4 @@ board-width 2240 mm
 board-cof 200 m
 screen-height 1080 px
 screen-width 1920 px
+g 10 m/s^2

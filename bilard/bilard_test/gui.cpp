@@ -35,7 +35,7 @@ void GUI::init(){
            int y = getGUIY(balls->at(i)->getY());
            int r = d/2;
            
-           GuiBall* guiBall = new GuiBall(x, y, r, i);
+           GuiBall* guiBall = new GuiBall(x, y, r, i, balls->at(i));
            guiBall->setColor(getQTColor(balls->at(i)->getColor()));
            guiBall->addItems(this);
            guiBalls.push_back(guiBall);
@@ -60,14 +60,16 @@ void GUI::refresh(){
     int d = 2 * getGUIR(balls->at(0)->getRadius());
     for (int i = 0; i < 16; i++) {
         Ball* b = balls->at(i);
-        /*if (b->hasChanged()) {
-            QGraphicsEllipseItem* ellipse = guiBalls.at(i);
+        if (b->hasChanged()) {
+            GuiBall* guiBall = guiBalls.at(i);
             int dx = balls->at(i)->getDX();
             int dy = balls->at(i)->getDY();
+            print(dx);
             print(dy);
-            ellipse->setX(dx);
-            ellipse->setY(dy);
-        } */
+            //guiBall->setX(x);
+            //guiBall->setY(y);
+            guiBall->refresh();
+        }
     }
 }
 void GUI::delay(int ms)

@@ -17,6 +17,8 @@ class Board
         void setWidth(int width);
         void setCof(int cof);
 
+		int getCof();
+
 };
 
 #endif // BOARD_H
