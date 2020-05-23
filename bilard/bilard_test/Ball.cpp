@@ -8,7 +8,7 @@
 
 using namespace std;
 
-Ball::Ball(int r, int number)
+Ball::Ball(double r, int number)
 {
     dx = 0;
     dy = 0;
@@ -51,28 +51,32 @@ Type Ball::getType(){
     if(number<=8) return SOLID;
     else return STRIPED;
 }
-int Ball::getX(){
+double Ball::getX(){
     return x;
 }
-int Ball::getY(){
+double Ball::getY(){
     return y;
 }
-int Ball::getRadius(){
+void Ball::setG(int g)
+{
+    this->g = g;
+}
+double Ball::getRadius(){
     return r;
 }
-int Ball::getDX()
+double Ball::getDX()
 {
     return dx;
 }
-int Ball::getDY()
+double Ball::getDY()
 {
     return dy;
 }
-void Ball::setX(int x){
+void Ball::setX(double x){
     this->dx = x - this->x;
     this->x = x;
 }
-void Ball::setY(int y){
+void Ball::setY(double y){
     this->dy = y - this->y;
     this->y=y;
 }
@@ -86,10 +90,10 @@ void Ball::setChanged(bool changed)
 int Ball::getNumber(){
     return number;
 }
-int Ball::getSpeed(){
+double Ball::getSpeed(){
     return speed;
 }
-int Ball::getAngle(){
+double Ball::getAngle(){
     return angle;
 }
 bool Ball::isTouchingEdge(Board &board) {
@@ -97,8 +101,8 @@ bool Ball::isTouchingEdge(Board &board) {
     else return false;
 } 
 bool Ball::isTouchingAnotherBall(Ball b) {
-    int x1 = abs(x - b.getX());
-    int y1 = abs(y - b.getY());
+    double x1 = abs(x - b.getX());
+    double y1 = abs(y - b.getY());
     if (sqrt((x1 * x1) + (y1 * y1) <= 2 * r)) { return true; }
     else return false;
 }
@@ -107,10 +111,11 @@ bool Ball::hasChanged(){
     return changed;
 }
 
-int Ball::getVX(int t)
+double Ball::getVX(double t)
 {   
-    double a = board->getCof * g;
+    /*double a = board->getCof * g;
     double a0 = a * cos(angle);
     double v0x = v0 * cos(angle);
-    return v0x + (ax*t);
+    return v0x + (ax*t); */
+    return 1;
 }

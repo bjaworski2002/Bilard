@@ -7,13 +7,13 @@ enum Type{SOLID, STRIPED};
 class Ball
 {
     private:
-        int r;
-        int x;
-        int y;
-        int dx;
-        int dy;
-        int v0;
-        int g; /* temp */
+        double r;
+        double x;
+        double y;
+        double dx;
+        double dy;
+        double v0;
+        double g; /* temp */
         //Color color;
         int number;
         //Type type;
@@ -23,7 +23,7 @@ class Ball
         bool changed;
         Board* board;
     public:
-        Ball(int r, int number);
+        Ball(double r, int number);
         bool isTouchingEdge(Board &board);
         bool isTouchingAnotherBall(Ball b);
         void print();
@@ -39,23 +39,24 @@ class Ball
         bool isStriped();
         Color getColor();
         Type getType();
-        int getRadius();
-        int getX();
-        int getY();
-        int getDX();
-        int getDY();
-        void setX(int x);
-        void setY(int y);
+        double getRadius();
+        double getX();
+        double getY();
+        void setG(int g);
+        double getDX();
+        double getDY();
+        void setX(double x);
+        void setY(double y);
         void setOnBoard(bool onBoard);
         void setChanged(bool changed);
         int getNumber();
-        int getSpeed();
-        int getAngle();
+        double getSpeed();
+        double getAngle();
         int getGUICoordinateX(int guiWidth, Board board);
         int getGUICoordinateY(int guiHeight, Board board);
         bool hasChanged();
-        int getVX(int t);
-        int getVY(int t);
+        double getVX(double t);
+        double getVY(double t);
 
 
 };

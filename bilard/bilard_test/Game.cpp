@@ -1,5 +1,6 @@
 ﻿#include "Game.h"
 #include "gui.h"
+#include "Ball.h"
 #include <fstream>
 #include <iostream>>
 #include <cstdlib>
