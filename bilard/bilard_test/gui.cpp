@@ -28,14 +28,13 @@ void GUI::init(){
        rect->setRect(0, 0, screenWidth, screenHeight);
        rect->setBrush(Qt::darkGreen);
        scene->addItem(rect);
-       int d = 2*getGUIR(balls->at(0)->getRadius());
+       int r = getGUIR(balls->at(0)->getRadius());
 
        for (int i = 0; i < 16; i++) {
            int x = getGUIX(balls->at(i)->getX());
            int y = getGUIY(balls->at(i)->getY());
-           int r = d/2;
-           
-           GuiBall* guiBall = new GuiBall(x, y, r, i, balls->at(i));
+
+           GuiBall* guiBall = new GuiBall(x, y, r, i, balls->at(i), this);
            guiBall->setColor(getQTColor(balls->at(i)->getColor()));
            guiBall->addItems(this);
            guiBalls.push_back(guiBall);

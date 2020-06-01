@@ -8,6 +8,7 @@ class Board
         int width;
         int height;
         float cof;
+        double g;
 
     public:
         Board();
@@ -16,7 +17,8 @@ class Board
         void setHeight(int height);
         void setWidth(int width);
         void setCof(int cof);
-
+        void setG(double g);
+        double getG();
 		int getCof();
 
 };

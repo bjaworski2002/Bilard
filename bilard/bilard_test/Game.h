@@ -22,7 +22,7 @@ class Game
     public:
         Game(GUI* gui);
         void start();
-        void hit(int v);
+        void hit(int v, int z);
         void readConfig();
         void printWidth();
         void setConfig();

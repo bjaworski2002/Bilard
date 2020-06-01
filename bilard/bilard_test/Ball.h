@@ -13,7 +13,6 @@ class Ball
         double dx;
         double dy;
         double v0;
-        double g; /* temp */
         //Color color;
         int number;
         //Type type;
@@ -42,11 +41,12 @@ class Ball
         double getRadius();
         double getX();
         double getY();
-        void setG(int g);
         double getDX();
         double getDY();
         void setX(double x);
         void setY(double y);
+        void setDX(double dx);
+        void setDY(double dy);
         void setOnBoard(bool onBoard);
         void setChanged(bool changed);
         int getNumber();
@@ -57,6 +57,8 @@ class Ball
         bool hasChanged();
         double getVX(double t);
         double getVY(double t);
+        double getX(double t);
+        double getY(double t);
 
 
 };

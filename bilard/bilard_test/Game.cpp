@@ -47,16 +47,18 @@ void Game::readConfig(){
 void Game::start(){
 //    player1->printWidth();
 }
-void Game::hit(int v)
+void Game::hit(int v, int z)
 {   
     // for (int i = v; i > 0; i--) {
         int x = balls.at(0)->getX();
         int y = balls.at(0)->getY();
         gui->print(x);
         gui->print(y);
-        balls.at(0)->setX(0);
+        balls.at(0)->setX(x+v);
+        balls.at(0)->setDX(v);
         balls.at(0)->setChanged(true);
-        balls.at(0)->setY(0);
+        balls.at(0)->setY(y+z);
+        balls.at(0)->setDY(z);
         gui->refresh();
         gui->delay(500);
     // }
@@ -70,7 +72,6 @@ void Game::setConfig(){
     board.setCof(configMap["board-cof"]);
     gui->setScreenHeight(configMap["screen-height"]);
     gui->setScreenWidth(configMap["screen-width"]);
-
 }
 void Game::createBalls(){
     int r = configMap["radius"];

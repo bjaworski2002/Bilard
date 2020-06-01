@@ -15,7 +15,7 @@
 #include <QPen>
 #include <QPointF>
 
-GuiBall::GuiBall(int x, int y, int r, int number, Ball* ball) {
+GuiBall::GuiBall(int x, int y, int r, int number, Ball* ball, GUI* gui) {
     
     this->ball = ball;
     int d = 2 * r;
@@ -29,20 +29,15 @@ GuiBall::GuiBall(int x, int y, int r, int number, Ball* ball) {
     else {
         strippedRect = NULL;
     }
-    addNumber(number, x + r, y + r, r);
+    addNumber(number, x, y, r, gui);
 }
-void GuiBall::addNumber(int number, int x, int y, int r)
+void GuiBall::addNumber(int number, int x, int y, int r, GUI* gui)
 {
     std::string s = std::to_string(number);
     QString qs = QString::fromStdString(s);
     ballNumber = new QGraphicsSimpleTextItem();
     ballNumber->setText(qs);
-    if (number < 10) {
-        ballNumber->setPos(x - (r / 5), y - (r * 3 / 5));
-    }
-    else {
-        ballNumber->setPos(x - (r * 4 / 5), y - (r * 3 / 5));
-    }
+    setPosNumber(x, y, r, number);
 
     QFont font;
     font.setPixelSize(r);
@@ -71,10 +66,11 @@ void GuiBall::addItems(GUI* gui)
 void GuiBall::refresh()
 {
     ellipse->setX(ball->getDX());
-    ellipse->setY(ball->getDY());
+    ellipse->setY(ball->getDY()); 
 
-    ballNumber->setX(ball->getDX());
-    ballNumber->setY(ball->getDY());
+   setPosNumber(ball->getX() - ball->getRadius()*2/3, ball->getY() - ball->getRadius()*2/3, ball->getRadius(), ball->getNumber());
+   // ballNumber->setX(ball->getX());
+   // ballNumber->setY(ball->getY());
 }
 
 void GuiBall::setX(int x)
@@ -84,6 +80,15 @@ void GuiBall::setX(int x)
 void GuiBall::setY(int y)
 {
     ball->setY(y);
+}
+void GuiBall::setPosNumber(int x, int y, int r, int number)
+{
+    if (number < 10) {
+        ballNumber->setPos(x + r - (r / 5), y + r - (r * 3 / 5));
+    }
+    else {
+        ballNumber->setPos(x + r - (r * 4 / 5), y + r - (r * 3 / 5));
+    }
 }
 int GuiBall::getX()
 {

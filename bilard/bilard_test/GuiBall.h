@@ -14,14 +14,15 @@ class GuiBall
 
 public:
 
-	GuiBall(int x, int y, int r, int number, Ball* ball);
+	GuiBall(int x, int y, int r, int number, Ball* ball, GUI* gui);
 
-	void addNumber(int number, int x, int y, int r);
+	void addNumber(int number, int x, int y, int r, GUI* gui);
 	void setColor(QBrush &color);
 	void addItems(GUI* gui);
 	void refresh();
 	void setX(int x);
 	void setY(int y);
+	void setPosNumber(int x, int y, int r, int number);
 	int getX();
 	int getY();
 

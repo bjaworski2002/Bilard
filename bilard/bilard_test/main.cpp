@@ -52,9 +52,9 @@ int main(int argc, char* argv[])
  //   gui.refresh();
     gui.delay(2000);
  //   gui.show2();
-   /*for (int i = 0; i < 1000; i=i+10) {
-        game.hit(i);
-    }*/
+   /* for (int i = 0; i < 1000; i=i+10) { */
+        game.hit(100, 200);
+    //}
     //game.hit(500);
     return a.exec(); 
 }

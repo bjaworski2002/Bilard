@@ -19,6 +19,14 @@ void Board::setWidth(int width){
 void Board::setCof(int cof){
     this->cof=cof;
 }
+void Board::setG(double g)
+{
+    this->g = g;
+}
+double Board::getG()
+{
+	return g;
+}
 int Board::getCof() {
     return cof;
 }

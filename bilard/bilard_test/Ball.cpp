@@ -57,10 +57,6 @@ double Ball::getX(){
 double Ball::getY(){
     return y;
 }
-void Ball::setG(int g)
-{
-    this->g = g;
-}
 double Ball::getRadius(){
     return r;
 }
@@ -73,12 +69,20 @@ double Ball::getDY()
     return dy;
 }
 void Ball::setX(double x){
-    this->dx = x - this->x;
+    //this->dx = x - this->x;
     this->x = x;
 }
 void Ball::setY(double y){
-    this->dy = y - this->y;
+    //this->dy = y - this->y;
     this->y=y;
+}
+void Ball::setDX(double dx)
+{
+    this->dx = dx;
+}
+void Ball::setDY(double dy)
+{
+    this->dy = dy;
 }
 void Ball::setOnBoard(bool onBoard){
     this->onBoard=onBoard;
@@ -113,9 +117,33 @@ bool Ball::hasChanged(){
 
 double Ball::getVX(double t)
 {   
-    /*double a = board->getCof * g;
-    double a0 = a * cos(angle);
+    double a = board->getCof() * board->getG();
+    double ax = a * cos(angle);
+
     double v0x = v0 * cos(angle);
-    return v0x + (ax*t); */
-    return 1;
+
+    return v0x + (ax*t); 
+}
+
+double Ball::getVY(double t)
+{
+    double a = board->getCof() * board->getG();
+    double ay = a * sin(angle);
+    double v0y = v0 * sin(angle);
+    return v0y + (ay * t);;
+}
+
+double Ball::getX(double t)
+{
+    double a = board->getCof() * board->getG();
+    double ax = a * cos(angle);
+    double v0x = v0 * cos(angle);
+    return x+v0x*t + (ax * (t*t) / 2);
+}
+double Ball::getY(double t)
+{
+    double a = board->getCof() * board->getG();
+    double ay = a * sin(angle);
+    double v0y = v0 * sin(angle);
+    return y + v0y * t + (ay * (t * t) / 2);
 }
