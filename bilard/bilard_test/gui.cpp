@@ -61,13 +61,15 @@ void GUI::refresh(){
         Ball* b = balls->at(i);
         if (b->hasChanged()) {
             GuiBall* guiBall = guiBalls.at(i);
-            int dx = balls->at(i)->getDX();
-            int dy = balls->at(i)->getDY();
-            print(dx);
-            print(dy);
+            //int dx = balls->at(i)->getDX();
+            //int dy = balls->at(i)->getDY();
+            //print(dx);
+            //print(dy);
             //guiBall->setX(x);
             //guiBall->setY(y);
             guiBall->refresh();
+            print(balls->at(i)->getX());
+            print(balls->at(i)->getY());
         }
     }
 }
@@ -152,15 +154,15 @@ void GUI::setScreenWidth(int screenWidth)
     this->screenWidth = screenWidth;
 }
 
-int GUI::getGUIX(int x)
+int GUI::getGUIX(double x)
 {
     return x*screenWidth / getBoard()->getWidth();
 }
-int GUI::getGUIY(int y)
+int GUI::getGUIY(double y)
 {
     return screenHeight - (y*screenHeight / getBoard()->getHeight());
 }
-int GUI::getGUIR(int r)
+int GUI::getGUIR(double r)
 {
     return r * screenWidth / getBoard()->getWidth();
     /* balls->at(0)->getRadius */

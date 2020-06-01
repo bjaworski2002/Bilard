@@ -49,19 +49,28 @@ void Game::start(){
 }
 void Game::hit(int v, int z)
 {   
-    // for (int i = v; i > 0; i--) {
-        int x = balls.at(0)->getX();
-        int y = balls.at(0)->getY();
+        int dx = v;
+        int dy = z;
+        int x = gui->getGUIX(balls.at(0)->getX());
+        int y = gui->getGUIY(balls.at(0)->getY());
+        balls.at(0)->setDX(dx);
+        balls.at(0)->setDY(dy);
+        z = z * -1;
+    for (int i = 28; i > 0; i--) {
+        x = x + dx;
+        y = y + dy;
+        gui->print("x oraz y sa rowne");
         gui->print(x);
         gui->print(y);
-        balls.at(0)->setX(x+v);
-        balls.at(0)->setDX(v);
+        gui->print("dx oraz dy sa rowne");
+        gui->print(dx);
+        gui->print(dy);
+        balls.at(0)->setX(x);
         balls.at(0)->setChanged(true);
-        balls.at(0)->setY(y+z);
-        balls.at(0)->setDY(z);
+        balls.at(0)->setY(y);
         gui->refresh();
         gui->delay(500);
-    // }
+     }
 }
 void Game::printWidth(){
     cout << board.getWidth();

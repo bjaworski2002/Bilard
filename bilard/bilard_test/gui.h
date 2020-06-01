@@ -38,9 +38,9 @@ public:
     void addNumber(int i, int x, int y);
     void setScreenHeight(int screenHeight);
     void setScreenWidth(int screenWidth);
-    int getGUIX(int x);
-    int getGUIY(int y);
-    int getGUIR(int r);
+    int getGUIX(double x);
+    int getGUIY(double y);
+    int getGUIR(double r);
     void hideBalls();
     void refreshBalls();
     QBrush getQTColor(Color color);

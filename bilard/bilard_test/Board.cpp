@@ -4,19 +4,19 @@ Board::Board()
 {
     //ctor
 }
-int Board::getWidth(){
+double Board::getWidth(){
     return width;
 }
-int Board::getHeight(){
+double Board::getHeight(){
     return height;
 }
-void Board::setHeight(int height){
+void Board::setHeight(double height){
     this->height=height;
 }
-void Board::setWidth(int width){
+void Board::setWidth(double width){
     this->width=width;
 }
-void Board::setCof(int cof){
+void Board::setCof(double cof){
     this->cof=cof;
 }
 void Board::setG(double g)
@@ -27,7 +27,7 @@ double Board::getG()
 {
 	return g;
 }
-int Board::getCof() {
+double Board::getCof() {
     return cof;
 }
 //void Board::createBalls(){

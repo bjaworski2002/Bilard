@@ -5,21 +5,21 @@
 class Board
 {
     private:
-        int width;
-        int height;
-        float cof;
+        double width;
+        double height;
+        double cof;
         double g;
 
     public:
         Board();
-        int getWidth();
-        int getHeight();
-        void setHeight(int height);
-        void setWidth(int width);
-        void setCof(int cof);
+        double getWidth();
+        double getHeight();
+        void setHeight(double height);
+        void setWidth(double width);
+        void setCof(double cof);
         void setG(double g);
         double getG();
-		int getCof();
+		double getCof();
 
 };
 
