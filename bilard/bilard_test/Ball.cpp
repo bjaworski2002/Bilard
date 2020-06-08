@@ -8,7 +8,7 @@
 
 using namespace std;
 
-Ball::Ball(double r, int number)
+Ball::Ball(double r, int number, Board* board)
 {
     dx = 0;
     dy = 0;
@@ -16,6 +16,7 @@ Ball::Ball(double r, int number)
     y = 0;
     this->r=r;
     this->number=number;
+    this->board = board;
     onBoard=false;
     /* changed=false;
     if (rand() % 3 == 0) */ changed = false;

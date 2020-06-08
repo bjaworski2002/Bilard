@@ -22,11 +22,11 @@ class Ball
         bool changed;
         Board* board;
     public:
-        Ball(double r, int number);
+        Ball(double r, int number, Board* board);
         bool isTouchingEdge(Board &board);
         bool isTouchingAnotherBall(Ball b);
         void print();
-        void move();
+        void hit();
         bool isMoving();
         void recountPosition();
         void recountVelocity();

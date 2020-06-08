@@ -68,8 +68,8 @@ void GUI::refresh(){
             //guiBall->setX(x);
             //guiBall->setY(y);
             guiBall->refresh();
-            print(balls->at(i)->getX());
-            print(balls->at(i)->getY());
+            //print(balls->at(i)->getX());
+            //print(balls->at(i)->getY());
         }
     }
 }
@@ -156,7 +156,8 @@ void GUI::setScreenWidth(int screenWidth)
 
 int GUI::getGUIX(double x)
 {
-    return x*screenWidth / getBoard()->getWidth();
+    /*print(x * screenWidth / getBoard()->getWidth());*/
+    return x * screenWidth / getBoard()->getWidth();
 }
 int GUI::getGUIY(double y)
 {

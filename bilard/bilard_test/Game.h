@@ -16,7 +16,7 @@ class Game
         Player *player1;
         Player *player2;
         int intervalTime;
-        map<string, int> configMap;
+        map<string, double> configMap;
         vector<Ball*> balls;
         GUI* gui;
     public:

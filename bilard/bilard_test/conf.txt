@@ -1,8 +1,8 @@
 intervaltime 100 ms
-radius 32 mm
-board-height 1120 mm
-board-width 2240 mm
-board-cof 200 m
+radius 0.032 m
+board-height 1.12 m
+board-width 2.24 m
+board-cof 0.2 m
 screen-height 560 px
 screen-width 1120 px
-grav 10 m/s^2
+grav 9.81 m/s^2

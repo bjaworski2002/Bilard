@@ -25,8 +25,8 @@ GuiBall::GuiBall(int x, int y, int r, int number, Ball* ball, GUI* gui) {
     ellipse->setX(x);
     ellipse->setY(y);
     if (number == 0) {
-        gui->print(x);
-        gui->print(y);
+        /*gui->print(x);
+        gui->print(y);*/
     }
     if (number > 8) {
         strippedRect = new QGraphicsRectItem();
@@ -72,14 +72,18 @@ void GuiBall::addItems(GUI* gui)
 
 void GuiBall::refresh()
 {
-    ellipse->setX(ball->getX());
-    ellipse->setY(ball->getY()); 
+    int x = gui->getGUIX(ball->getX());
+    int y = gui->getGUIY(ball->getY());
+    int r = gui->getGUIR(ball->getRadius());
 
-    int tx = ball->getX();
-    int ty = ball->getY();
-    gui->print("Koordynaty tx ty");
+    ellipse->setX(x);
+    ellipse->setY(y); 
+
+    int tx = x - r/2;
+    int ty = y - r/4;
+    /*gui->print("Koordynaty tx ty");
     gui->print(tx);
-    gui->print(ty);
+    gui->print(ty);*/
    setPosNumber(tx, ty, ball->getRadius(), ball->getNumber());
    // ballNumber->setX(ball->getX());
    // ballNumber->setY(ball->getY());

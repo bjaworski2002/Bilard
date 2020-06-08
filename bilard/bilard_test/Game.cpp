@@ -30,7 +30,7 @@ void Game::readConfig(){
         exit(1);
     }
     string key;
-    int value;
+    double value;
     string devnull;
     while(!inFile.eof()){
         inFile >> key >> value >> devnull;
@@ -51,15 +51,30 @@ void Game::hit(int v, int z)
 {   
         int dx = v;
         int dy = z;
-        int x = gui->getGUIX(balls.at(0)->getX());
-        int y = gui->getGUIY(balls.at(0)->getY());
+        int t = 0;
+        int dt = 100;
+        gui->print(board.getG() * 1000);
+        int x;
+        int y;
         balls.at(0)->setDX(dx);
         balls.at(0)->setDY(dy);
         z = z * -1;
-    for (int i = 28; i > 0; i--) {
+     
+            x = balls.at(0)->getX(t);
+            y = balls.at(0)->getY(t);
+            t = t + dt;
+
+            balls.at(0)->setX(x);
+            balls.at(0)->setChanged(true);
+            balls.at(0)->setY(y);
+            gui->refresh();
+            gui->delay(dt);
+        
+
+    /* for (int i = 28; i > 0; i--) {
         x = x + dx;
         y = y + dy;
-        gui->print("x oraz y sa rowne");
+       gui->print("x oraz y sa rowne");
         gui->print(x);
         gui->print(y);
         gui->print("dx oraz dy sa rowne");
@@ -70,7 +85,7 @@ void Game::hit(int v, int z)
         balls.at(0)->setY(y);
         gui->refresh();
         gui->delay(500);
-     }
+     } */
 }
 void Game::printWidth(){
     cout << board.getWidth();
@@ -79,26 +94,29 @@ void Game::setConfig(){
     board.setHeight(configMap["board-height"]);
     board.setWidth(configMap["board-width"]);
     board.setCof(configMap["board-cof"]);
+    board.setG(configMap["grav"]);
     gui->setScreenHeight(configMap["screen-height"]);
     gui->setScreenWidth(configMap["screen-width"]);
 }
 void Game::createBalls(){
-    int r = configMap["radius"];
+    double r = configMap["radius"];
     for(int i=0; i<16; i++){
-        Ball* ball = new Ball(r,i);
+        Ball* ball = new Ball(r,i,&board);
         balls.push_back(ball);
     }
 }
 void Game::setInitialCoordinates() {
     /* wspolrzedne dla i=0; j=0; */
-    int rackX = ((board.getWidth() * 3) / 4);
-    int rackY = board.getHeight() / 2;
+    double rackX = ((board.getWidth() * 3) / 4);
+    double rackY = board.getHeight() / 2;
     /* ustawianie pozycji bia³ej i czarnej kuli*/
     balls.at(0)->setOnBoard(true);
     balls.at(0)->setX(board.getWidth() - rackX);
     balls.at(0)->setY(rackY);
-
-    int r = configMap["radius"];
+    gui->print(14);
+    gui->print((int)(rackY*1000));
+    gui->print((int)(rackX*1000));
+    double r = configMap["radius"];
     for (int j = 0; j < 5; j++) {
         for (int i = 0; i < j+1; i++) {
             int poz;
@@ -108,7 +126,7 @@ void Game::setInitialCoordinates() {
             } while (balls.at(poz)->isOnBoard());
             balls.at(poz)->setOnBoard(true);
             balls.at(poz)->setX(rackX + (sqrt(3) * r * j));
-            balls.at(poz)->setY(rackY + ( (j * r) - (2 * i * r)));
+            balls.at(poz)->setY(rackY + ((j * r) - (2 * i * r)));
             /* balls.at(poz)->setX(rackX + (i * r * sqrt(3)));
             balls.at(poz)->setY(rackY + ((i * r) - (2 * j * r))); */
         }
